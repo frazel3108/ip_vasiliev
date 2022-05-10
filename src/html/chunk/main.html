@@ -1,0 +1,195 @@
+<main class="content-main">
+    <div class="table-cards">
+        <!-- 1 строчка -->
+        <div class="first-line">
+            <div class="card card-working-fields">
+                <div class="card-working-fields__item">
+                    <h3>Работа с полями</h3>
+                    <div class="image">
+                        <img src="img/img_1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="card card-harvest-statistics">
+                <div class="card-harvest-statistics__item">
+                    <h3>Статистика урожая</h3>
+                    <p>Поволжье</p>
+                    <div class="image">
+                        <img src="img/карта_РФ.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="card card-weather">
+                <div class="card-weather__item">
+                    <h3>Погода в Курской области</h3>
+
+                    <div class="table-weather">
+                        <div class="table-weather__item">
+                            <div class="table-weather__date">
+                                <p>28.08.2020</p>
+                                <p>Среда</p>
+                            </div>
+                            <div class="table-weather__degrees">
+                                <p class="table-degrees__item">+28</p>
+                                <p class="table-degrees__item-dgr">℃</p>
+                            </div>
+                        </div>
+
+                        <div class="table-weather__description">
+                            <div class="table-weather__description-item">
+                                <p>750 мм рт. ст.</p>
+                                <p>3,5 м/с</p>
+                            </div>
+                            <div class="table-weather__description-item">
+                                <p>Солнечно</p>
+                                <p>Осадки 7%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 2 строчка -->
+        <div class="second-line">
+            <div class="card card-reports-and-statistics">
+                <div class="card-reports-and-statistics__item">
+                    <div class="ras-title__table">
+                        <h3>Отчёты и статистика</h3>
+                        <table>
+                            <thead>
+                            <tr>
+                                @@loop("table/table-header.html", "../../data/table.json")
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>@@loop("table/table-data1.html", "../../data/table.json")</tr>
+                            <tr>@@loop("table/table-data2.html", "../../data/table.json")</tr>
+                            <tr>@@loop("table/table-data3.html", "../../data/table.json")</tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="ras-chart">
+                        <img src="img/chart.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="card card-employees">
+                <div class="card-employees__item">
+                    <h3>Сотрудники</h3>
+                    <table>
+                        <tr>
+                            <td>
+                                <p class="employee">Иванов Иван Иванович</p>
+                                <p class="position">Заместитель</p>
+                            </td>
+                            <td><a href="#">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#phone"></use>
+                                </svg>
+                            </a></td>
+                            <td><a href="#">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#mail"></use>
+                                </svg>
+                            </a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="employee">Константинов Иван Иванович</p>
+                                <p class="position">Секретарь</p>
+                            </td>
+                            <td><a href="#">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#phone"></use>
+                                </svg>
+                            </a></td>
+                            <td><a href="#">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#mail"></use>
+                                </svg>
+                            </a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card-employees__more">
+                    <a href="#">Показать еще</a>
+                </div>
+            </div>
+        </div>
+        <!-- 3 строчка -->
+        <div class="third-line">
+            <div class="card card-wheat-statistics">
+                <div class="card-wheat-statistics__header">
+                    <h3>Статистика пшена на полях ЦАО</h3>
+                    <div class="header_dropdown">
+                        <p>По годам</p>
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#downArrow"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-wheat-statistics__item">
+                    <table>
+                        <tr>
+                            <td class="item-list">
+                                <div class="item-list__harvest-2020"></div>
+                            </td>
+                            <td>
+                                <p class="item-title">Урожай 2020</p>
+                                <div class="item-description">
+                                    <p>15 150 000 тонн</p>
+                                    <p>120 областей</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="item-list">
+                                <div class="item-list__harvest-2019"></div>
+                            </td>
+                            <td>
+                                <p class="item-title">Урожай 2019</p>
+                                <div class="item-description">
+                                    <p>102 650 980 тонн</p>
+                                    <p>250 областей</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="pie-chart">
+                        <img src="img/pieChart.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="card card-rental-equipment">
+                <div class="card-rental-equipment__header">
+                    <h3>Арендуемая техника</h3>
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#star"/>
+                    </svg>
+                </div>
+                <div class="card-rental-equipment__item">
+                    <div class="card-rental-equipment__item-description">
+                        <p class="company">ООО “Магнат Мед”</p>
+                        <table>
+                            <tr>
+                                <td><div class="item-list__excavators-2020"></div></td>
+                                <td>
+                                    <p class="item-title">Экскаваторы 2020</p>
+                                    <div class="item-description">
+                                        <p>15 100 машин</p>
+                                        <p>130 областей</p>
+                                        <p>5 предприятий</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <a href="#">Добавить технику</a>
+                    </div>
+                    <div class="card-rental-equipment__item-chart">
+                        <img src="img/chart_2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

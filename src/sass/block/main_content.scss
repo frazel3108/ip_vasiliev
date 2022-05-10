@@ -1,0 +1,418 @@
+.content-main {
+    display: flex;
+    @media (max-width: 1280px) {
+        display: revert;
+    }
+    justify-content: center;
+    .table-cards {
+        flex: auto;
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 1200px) and (max-width: 1440px) {
+            max-width: 1320px;
+        }
+        @media (min-width: 1200px) {
+            max-width: 1140px;
+        }
+        .card {
+            background: $bgCard;
+            box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.15);
+            border-radius: 18px;
+            margin-bottom: 10px;
+            h3 {
+                margin: 0;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+        .first-line {
+            display: flex;
+            flex-wrap: wrap;
+            &>* {
+                flex: auto;
+                margin: 10px;
+            }
+            .card-working-fields {
+                .card-working-fields__item {
+                    margin: 20px;
+                    .image {
+                        img {
+                            margin: 20px 0;
+                            max-height: 148px;
+                            float: right;
+                        }
+                    }
+                }
+            }
+            .card-harvest-statistics {
+                .card-harvest-statistics__item {
+                    margin: 20px;
+                    p {
+                        margin: 10px 0 0 0;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 19px;
+                    }
+                    .image {
+                        text-align: center;
+                        img {
+                            max-height: 147px;
+                            width: auto;
+                            @media (max-width: 375px) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .card-weather {
+                .card-weather__item {
+                    margin: 20px;
+                    .table-weather {
+                        width: 100%;
+                        p {
+                            margin: 0;
+                        }
+                        .table-weather__item {
+                            display: flex;
+                            .table-weather__date {
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 19px;
+                                align-self: center;
+                            }
+                            .table-weather__degrees {
+                                flex: auto;
+                                display: flex;
+                                justify-content: center;
+                                font-weight: 300;
+                                .table-degrees__item {
+                                    font-size: 80px;
+                                    line-height: 109px;
+                                    letter-spacing: -0.05em;
+                                    @media (max-width: 370px) {
+                                        font-size: 40px;
+                                        line-height: 53px;
+                                    }
+                                }
+                                .table-degrees__item-dgr {
+                                    font-size: 36px;
+                                    line-height: 49px;
+                                    @media (max-width: 370px) {
+                                        font-size: 18px;
+                                        line-height: 24px;
+                                    }
+                                }
+                            }
+                        }
+                        .table-weather__description {
+                            display: flex;
+                            .table-weather__description-item {
+                                width: 50%;
+                                p {
+                                    color: $textSecondary;
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 19px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .second-line {
+            display: flex;
+            flex-wrap: wrap;
+            &>* {
+                flex: auto;
+                margin: 10px;
+            }
+            .card-reports-and-statistics {
+                .card-reports-and-statistics__item {
+                    display: flex;
+                    margin: 20px;
+                    flex-direction: unset;
+                    @media (max-width: 425px) {
+                        flex-direction: column;
+                    }
+                    .ras-title__table {
+                        flex: auto;
+                        table {
+                            width: 100%;
+                            margin-top: 10px;
+                            border-spacing: 0;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 19px;
+                            thead {
+                                text-align: left;
+                                th {
+                                    font-weight: normal;
+                                    padding: 0 0 10px 15px;
+                                    &:first-child {
+                                        padding: 0 0 10px 0;
+                                    }
+                                }
+                            }
+                            td {
+                                padding: 15px 20px;
+                                border-top: 1px solid #151e41;
+                                border-left: 1px solid #151e41;
+                                @media (max-width: 1024px) {
+                                    padding: 7px 10px;
+                                }
+                                &:first-child {
+                                    border-left: none;
+                                    padding: 15px 20px 15px 0;
+                                    @media (max-width: 1024px) {
+                                        padding: 7px 10px 7px 0;
+                                    }
+                                }
+                                &:last-child {
+                                    border-right: none;
+                                }
+                            }
+                        }
+                    }
+                    .ras-chart {
+                        flex: auto;
+                        align-self: center;
+                        margin: 0;
+                        @media (max-width: 425px) {
+                            margin: 20px 0;
+                        }
+                        img {
+                            float: right;
+                            margin-right: 40px;
+                            max-height: 184px;
+                            width: auto;
+                        }
+                    }
+                }
+            }
+            .card-employees {
+                .card-employees__item {
+                    margin: 20px;
+                    table {
+                        margin: 15px 0;
+                        width: 100%;
+                        td {
+                            p {
+                                margin: 0;
+                                a {
+                                    text-decoration: none;
+                                }
+                            }
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 19px;
+                            .position {
+                                color: $textSecondary;
+                            }
+                            a {
+                                svg {
+                                    width: 16px;
+                                    height: 16px;
+                                    fill: white;
+                                }
+                            }
+                        }
+                    }
+                }
+                .card-employees__more {
+                    margin-bottom: 20px;
+                    a {
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 19px;
+                        margin: 20px;
+                        text-decoration: none;
+                        color: $blueMain;
+                    }
+                }
+            }
+        }
+        .third-line {
+            display: flex;
+            flex-wrap: unset;
+            @media (max-width: 1280px) {
+                flex-wrap: wrap;
+            }
+            &>* {
+                flex: auto;
+                margin: 10px;
+            }
+            .card-wheat-statistics {
+                &>* {
+                    margin: 20px;
+                }
+                .card-wheat-statistics__header {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    .header_dropdown {
+                        display: flex;
+                        align-self: center;
+                        p {
+                            margin: 0;
+                            color: $blueMain;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 19px;
+                        }
+                        svg {
+                            align-self: center;
+                            margin: 0 10px;
+                            width: 16px;
+                            max-height: 16px;
+                            height: auto;
+                            fill: $blueMain;
+                        }
+                    }
+                }
+                .card-wheat-statistics__item {
+                    display: flex;
+                    flex-direction: unset;
+                    @media (max-width: 425px) {
+                        flex-direction: column;
+                    }
+                    table {
+                        tr {
+                            vertical-align: text-top;
+                        }
+                        .item-list {
+                            vertical-align: top;
+                            .item-list__harvest-2020 {
+                                margin-right: 20px;
+                                width: 14px;
+                                height: 14px;
+                                background: linear-gradient( 141.65deg, #43e9ff 22.09%, #00abab 67.48%), #646981;
+                                border-radius: 5px;
+                            }
+                            .item-list__harvest-2019 {
+                                margin-right: 20px;
+                                width: 14px;
+                                height: 14px;
+                                background: linear-gradient( 124.04deg, rgba(182, 26, 255, 0.5) -6.27%, rgba(0, 26, 255, 0.5) 98.36%), #656cff;
+                                border-radius: 5px;
+                            }
+                        }
+                        p {
+                            margin: 0;
+                            &.item-title {
+                                font-weight: 700;
+                                font-size: 14px;
+                                line-height: 19px;
+                                margin-bottom: 10px;
+                            }
+                        }
+                        .item-description {
+                            p {
+                                color: $textSecondary;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 19px;
+                            }
+                        }
+                    }
+                    .pie-chart {
+                        flex: auto;
+                        text-align: center;
+                        margin: 0;
+                        @media (max-width: 425px) {
+                            margin: 20px 0;
+                        }
+                        img {
+                            max-height: 206px;
+                            width: auto;
+                        }
+                    }
+                }
+            }
+            .card-rental-equipment {
+                &>* {
+                    margin: 20px;
+                }
+                .card-rental-equipment__header {
+                    display: flex;
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                        margin-left: 15px;
+                        align-self: center;
+                        fill: $blueMain;
+                    }
+                }
+                .card-rental-equipment__item {
+                    display: flex;
+                    flex-direction: unset;
+                    @media (max-width: 425px) {
+                        flex-direction: column;
+                    }
+                    .card-rental-equipment__item-description {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .company {
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 19px;
+                        }
+                        table {
+                            p {
+                                margin: 0;
+                                &.item-title {
+                                    font-weight: 700;
+                                    font-size: 14px;
+                                    line-height: 19px;
+                                    margin-bottom: 10px;
+                                }
+                            }
+                            tr {
+                                vertical-align: text-top;
+                            }
+                            .item-list__excavators-2020 {
+                                width: 14px;
+                                height: 14px;
+                                background: linear-gradient( 141.65deg, #43e9ff 22.09%, #00abab 67.48%), #646981;
+                                border-radius: 5px;
+                                margin-right: 20px;
+                            }
+                            .item-description {
+                                p {
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 19px;
+                                    color: $textSecondary;
+                                }
+                            }
+                        }
+                        a {
+                            text-decoration: none;
+                            color: $blueMain;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 19px;
+                        }
+                    }
+                    .card-rental-equipment__item-chart {
+                        flex: auto;
+                        text-align: center;
+                        overflow: hidden;
+                        margin: 0 20px;
+                        @media (max-width: 425px) {
+                            margin: 20px 0;
+                        }
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

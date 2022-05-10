@@ -1,0 +1,44 @@
+.content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .sidebar {
+        display: flex;
+        button {
+            background: none;
+            border: none;
+            svg {
+                width: 32px;
+                height: 32px;
+            }
+            display: none;
+            @media (max-width: 1024px) {
+                display: block;
+            }
+        }
+    }
+    .title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 27px;
+        margin: 20px 0;
+        @media (max-width: 1024px) {
+            margin: 20px;
+        }
+    }
+    .content-header-buttons {
+        a {
+            text-decoration: none;
+            margin: 0 5px;
+            svg {
+                width: 32px;
+                height: 32px;
+                fill: white;
+            }
+            img {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    }
+}
